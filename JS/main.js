@@ -22,3 +22,28 @@ porcenDiv.addEventListener("click", (e) => {
     console.log("Si soy custom");
   }
 });
+
+// Crear un evento de submit para la forma
+form.addEventListener("submit", (e) => {
+  // Enviar la action por defecto
+  e.preventDefault();
+
+  // Crear objeto constante con los valores de la forma
+  const formulario = {
+    subtotalF: subtotal.value,
+    porcenTipF: porcenTip.value,
+    personasF: personas.value,
+  };
+
+  console.log(formulario);
+
+  const { subtotalF, porcenTipF, personasF } = formulario;
+
+  const tipFinal = tipCalculater(subtotalF, porcenTipF, personasF);
+
+  console.log(tipFinal.toFixed(2));
+
+  const totalF = totalFinal(subtotalF, personasF, tipFinal);
+
+  console.log(totalF.toFixed(2));
+});
