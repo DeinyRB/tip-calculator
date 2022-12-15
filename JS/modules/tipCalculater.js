@@ -6,9 +6,6 @@ function tipCalculater(subtotal, porcenTip, personas) {
   //Redondea sin decimales, es decir a numeros enteros
   //propina = Math.round(propina);
 
-  // Redondea a cifras decimales
-  propina = propina;
-
   return propina;
 }
 

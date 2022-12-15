@@ -5,8 +5,6 @@ function totalFinal(subtotal, personas, propina){
 
   totalF += propina;
   
-  totalF = totalF;
-
   return totalF;
 }
 
