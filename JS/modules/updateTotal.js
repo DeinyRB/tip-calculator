@@ -1,5 +1,5 @@
-function updateTipTotal(tipFinal, element){
-  element.innerTex = '$ + tipFinal'
+function updateTotal(totalFinal, element) {
+  element.innerText = "$" + totalFinal;
 }
 
-export default updateTip;
+export default updateTotal;

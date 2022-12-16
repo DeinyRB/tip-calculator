@@ -1,27 +1,50 @@
 import tipCalculater from "./modules/tipCalculater.js";
 import totalFinal from "./modules/totalFinal.js";
-import updateTip from "./modules/updateTip.js";
+import updateTip from "./modules/updateTip.js"
 import updateTotal from "./modules/updateTotal.js";
 
 // Constantes de los elementos de HTML
 const main = document.getElementById("main");
 const form = document.getElementById("main-form");
 
+
+const tipResult = document.getElementById('result-tip');
+const totalResult = document.getElementById('result-total');
+
+// Custom box
+const customTip = document.getElementById('result-total');
+
 // Guardar los valores en variables
 const subtotal = document.getElementById("total-bill");
 const porcenDiv = document.getElementById("form-btns");
 const personas = document.getElementById("total-people");
 
+// Metodo para seleccionar todos los botones 
+const btns = document.querySelectorAll('.form__box__container__btn');
+const resetBtn = document.getElementById('reset-btn');
+
+
 // Variable para almacenar el valor porcentual seleccionado
 let porcenTip;
+let Custom;
 
 // Evento para escuchar a que boton le estamos dando click
 porcenDiv.addEventListener("click", (e) => {
-  porcenTip = e.target;
+  for(let i = 0; i < btns.length; i++) {
+    btns[i].classList.remove('active');
+  }
+
+porcenTip = e.target;
+porcenTip.classList.add('active');
+
+console.log(porcenTip);
+
 
   // Condicion para escuchar el custom
-  if (e.target.id === "custom-tip") {
-    console.log("Si soy custom");
+  if (e.target === customTip) {
+    custom = e.target;
+
+    custom.classList.remove('active');
   }
 });
 
@@ -43,17 +66,25 @@ form.addEventListener("submit", (e) => {
 
   const tipFinal = tipCalculater(subtotalF, porcenTipF, personasF);
 
-  console.log(tipFinal.toFixed(2));
-
   const totalF = totalFinal(subtotalF, personasF, tipFinal);
 
-  console.log(totalF.toFixed(2));
 
   //Llamar  a las funciones que actualizan el DOM
-  update(tipFinal, tipResult);
-  updateTotal(totalF, totalResult)
+  updateTip(tipFinal.toFixed(2), tipResult);
+  updateTotal(totalF.toFixed(2), totalResult);
 
 });
 
+// Boton para reiniciar la Tip calculator
+resetBtn.addEventListener('click', (e) => {
+  subtotal.value = '';
+  customTip.value = '';
+  personas.value = '';
 
-//agregar funciones para actualizar el DOM (hacer commit)
+  for (let i = 0; i < btns.length; i++) {
+    btns[i].classList.remove('active');
+  }
+
+  tipResult.innerText = '$0.00';
+  totalResult.innerText = '$0.00';
+});
