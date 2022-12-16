@@ -1,11 +1,36 @@
+/*
+  creacion de Variables 
+*/
+$main-bg: hsl(185, 41%, 84%);
+$white: hsl(0, 0%, 100%);
+$input-bg: hsl(189, 41%, 97%);
+$input-text: hsl(183, 100%, 15%);
+
+/* 
+aplicar magen y pading en cero y un tipo de letra para toda en toda la pagina  
+*/
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Space Mono', monospace;
+}
+ 
+/*
+  Color del placeholder este es el que utilizamos en los input, 
+  (mensaje que aparece mientras no haya escrito) y todas las clases predetreminadas se llaman con ::
+*/
+::placeholder {
+  color: hsl(184, 14%, 56%);
+  font-weight: 700;
+  margin-right: 0.8rem;
 }
 
+
+/*
+  Estilos para celular
+*/
 body {
-  background-color: hsl(185,41%, 84%);
-  font-family: 'space Mono';
+  background-color: $main-bg;
 }
 
 .header {
@@ -15,21 +40,89 @@ body {
   justify-content: center;
   align-items: center;
 
-  &__title{
+  &__title {
     width: 17%;
     height: 30%;
   }
 }
 
-main {
-  height: 80vh;
-  background-color: #fff;
+.main {
+  background-color: $white;
   border-radius: 1rem;
 }
 
-form {
+.form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
+  padding: 1.4rem;
 
+  &__box {
+    width: 100%;
+    margin-bottom: 1rem;
+
+    &__label {
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: hsl(186, 14%, 43%);
+    }
+
+    &__inputs {
+      height: 2.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: hsl(189, 41%, 97%);
+      padding: 0.3rem 1rem;
+      border-radius: 0.8rem;
+
+      input {
+        border: none;
+        outline: none;
+        text-align: right;
+        font-size: 1.5rem;
+        background-color: $input-bg;
+        color: $input-text;
+        font-weight: 700;
+        z-index: 1;
+        width: 50%;
+      }
+    }
+
+    &__container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+
+      &__btn {
+        border: none;
+        background-color: hsl(183, 100%, 15%);
+        color: $white;
+        font-weight: 700;
+        font-size: 1.5rem;
+        border-radius: 0.4rem;
+        width: 47%;
+        margin-top: 0.8rem;
+        padding: 0.7rem 0;
+        outline: none;
+        transition: 0.25s;
+      }
+
+      &__btn:nth-child(odd) {
+        margin-right: 6%;
+      }
+
+      &__btn.active {
+        background-color: hsl(172, 67%, 45%);
+        color: $input-text;
+      }
+
+      input {
+        text-align: right;
+        background-color: $input-bg;
+        color: $input-text;
+      }
+    }
+
+  }
+}

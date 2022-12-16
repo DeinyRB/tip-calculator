@@ -7,7 +7,6 @@ import updateTotal from "./modules/updateTotal.js";
 const main = document.getElementById("main");
 const form = document.getElementById("main-form");
 
-
 const tipResult = document.getElementById('result-tip');
 const totalResult = document.getElementById('result-total');
 
