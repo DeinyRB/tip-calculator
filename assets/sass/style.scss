@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(185,41%, 84%);
+  font-family: 'space Mono';
+}
+
+.header {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__title{
+    width: 17%;
+    height: 30%;
+  }
+}
+
+main {
+  height: 80vh;
+  background-color: #fff;
+  border-radius: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

@@ -1,5 +1,7 @@
 import tipCalculater from "./modules/tipCalculater.js";
 import totalFinal from "./modules/totalFinal.js";
+import updateTip from "./modules/updateTip.js";
+import updateTotal from "./modules/updateTotal.js";
 
 // Constantes de los elementos de HTML
 const main = document.getElementById("main");
@@ -46,4 +48,12 @@ form.addEventListener("submit", (e) => {
   const totalF = totalFinal(subtotalF, personasF, tipFinal);
 
   console.log(totalF.toFixed(2));
+
+  //Llamar  a las funciones que actualizan el DOM
+  update(tipFinal, tipResult);
+  updateTotal(totalF, totalResult)
+
 });
+
+
+//agregar funciones para actualizar el DOM (hacer commit)
