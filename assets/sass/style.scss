@@ -145,4 +145,59 @@ body {
     }
   }
 
+  &__calculate {
+    border: none;
+    background-color: $btn-active;
+    color: $input-text;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.7rem 0;
+    border-radius: 0.4rem;
+  }
 }
+
+.result {
+  background-color: $btn-bg;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 1rem;
+  border-radius: 0.8rem;
+  margin: 0 1.4rem;
+
+  &__box {
+    display: flex;
+    color: $white;
+    justify-content: space-between;
+    margin-bottom: 1.4rem;
+
+    h3 {
+      font-size: 0.8rem;
+
+      span {
+        display: block;
+        color: hsl(184, 14%, 56%);
+      }
+    }
+
+    p {
+      color: $btn-active;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+
+  &__btn {
+    border: none;
+    background-color: $btn-active;
+    color: $input-text;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+    border-radius: 0.4rem;
+    margin-top: 1rem;
+  }
+}
+
