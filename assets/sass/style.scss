@@ -1,30 +1,35 @@
 /*
-  creacion de Variables 
+  Variables
 */
 $main-bg: hsl(185, 41%, 84%);
 $white: hsl(0, 0%, 100%);
 $input-bg: hsl(189, 41%, 97%);
+$btn-bg: hsl(183, 100%, 15%);
 $input-text: hsl(183, 100%, 15%);
+$btn-active: hsl(172, 67%, 45%);
+$btn-active-hover: hsl(172, 65%, 37%);
+$btn-active-act: hsl(172, 64%, 31%);
 
 /* 
 aplicar magen y pading en cero y un tipo de letra para toda en toda la pagina  
 */
+
 * {
   margin: 0;
   padding: 0;
   font-family: 'Space Mono', monospace;
 }
- 
+
 /*
   Color del placeholder este es el que utilizamos en los input, 
   (mensaje que aparece mientras no haya escrito) y todas las clases predetreminadas se llaman con ::
 */
+
 ::placeholder {
   color: hsl(184, 14%, 56%);
   font-weight: 700;
   margin-right: 0.8rem;
 }
-
 
 /*
   Estilos para celular
@@ -48,7 +53,8 @@ body {
 
 .main {
   background-color: $white;
-  border-radius: 1rem;
+  border-radius: 1rem 1rem 0 0;
+  padding: 0.5rem 0 1.75rem;
 }
 
 .form {
@@ -85,7 +91,19 @@ body {
         color: $input-text;
         font-weight: 700;
         z-index: 1;
-        width: 50%;
+        width: 95%;
+      }
+
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type=number] {
+        -moz-appearance: textfield;
       }
     }
 
@@ -96,7 +114,7 @@ body {
 
       &__btn {
         border: none;
-        background-color: hsl(183, 100%, 15%);
+        background-color: $btn-bg;
         color: $white;
         font-weight: 700;
         font-size: 1.5rem;
@@ -113,7 +131,7 @@ body {
       }
 
       &__btn.active {
-        background-color: hsl(172, 67%, 45%);
+        background-color: $btn-active;
         color: $input-text;
       }
 
@@ -121,8 +139,10 @@ body {
         text-align: right;
         background-color: $input-bg;
         color: $input-text;
+        width: 45%;
+        padding-right: 2%;
       }
     }
-
   }
+
 }

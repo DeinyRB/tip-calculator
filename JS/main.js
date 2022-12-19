@@ -1,6 +1,6 @@
 import tipCalculater from "./modules/tipCalculater.js";
 import totalFinal from "./modules/totalFinal.js";
-import updateTip from "./modules/updateTip.js"
+import updateTip from "./modules/updateTip.js";
 import updateTotal from "./modules/updateTotal.js";
 
 // Constantes de los elementos de HTML
@@ -25,7 +25,7 @@ const resetBtn = document.getElementById('reset-btn');
 
 // Variable para almacenar el valor porcentual seleccionado
 let porcenTip;
-let Custom;
+let custom;
 
 // Evento para escuchar a que boton le estamos dando click
 porcenDiv.addEventListener("click", (e) => {
