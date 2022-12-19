@@ -172,4 +172,48 @@ body {
   margin-top: 1rem;
 }
 
+/*Media para pantalla computadora*/
+@media screen and (min-width: 600px) {
+  .header {
+    height: 20vh;
+  }
+  .header__title {
+    width: 7%;
+    height: 28%;
+  }
+  .main {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 60vh;
+    border-radius: 1rem;
+    margin: 0 auto;
+  }
+  .form {
+    width: 50%;
+  }
+  .form__box__container__btn {
+    width: 30%;
+    padding: 0.2rem 0;
+    margin-right: 0;
+  }
+  .form__box__container__btn:nth-child(1), .form__box__container__btn:nth-child(2), .form__box__container__btn:nth-child(4), .form__box__container__btn:nth-child(5) {
+    margin-right: 2%;
+  }
+  .form__box__container input {
+    width: 30%;
+    padding-right: 0;
+  }
+  .result {
+    width: 50%;
+    justify-content: space-between;
+  }
+  .result__first {
+    margin: 1rem 0;
+  }
+  .result__box:last-child {
+    margin-top: 2.75rem;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

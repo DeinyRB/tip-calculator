@@ -201,3 +201,63 @@ body {
   }
 }
 
+/*Media para pantalla computadora*/
+
+@media screen and (min-width: 600px) {
+  .header {
+    height: 20vh;
+  
+    &__title {
+      width: 7%;
+      height: 28%;
+    }
+  }
+
+  .main {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 60vh;
+    border-radius: 1rem;
+    margin: 0 auto;
+  }
+
+  .form {
+    width: 50%;
+    
+    &__box {
+      &__container {
+        &__btn {
+          width: 30%;
+          padding: 0.2rem 0;
+          margin-right: 0;
+        }
+
+        &__btn:nth-child(1),
+        &__btn:nth-child(2),
+        &__btn:nth-child(4),
+        &__btn:nth-child(5) {
+          margin-right: 2%;
+        }
+
+        input {
+          width: 30%;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  .result {
+    width: 50%;
+    justify-content: space-between;
+
+    &__first {
+      margin: 1rem 0;
+    }
+
+    &__box:last-child {
+      margin-top: 2.75rem;
+    }
+  }
+}
