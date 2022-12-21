@@ -131,3 +131,59 @@ resetBtn.addEventListener("click", (e) => {
   tipResult.innerText = "$0.00";
   totalResult.innerText = "$0.00";
 });
+
+
+/*
+  VALIDACION DE LA FORMA 
+*/
+
+function notZero(input) {
+  let check = true;
+
+  if (input <= 0) {
+    check = false;
+  }
+
+  return check;
+}
+
+function validateAll(subTotalF, personasF) {
+  let check = true;
+
+  // Validar que no sean ceros
+  if (!notZero(parseFloat(subTotalF))) {
+    check = false;
+
+    subtotal.parentElement.classList.add("invalid");
+    invalid1.innerText = "No puede ser cero o menor que cero";
+
+    removeText(invalid1);
+    removeBorder(subtotal, "invalid");
+  }
+
+  if (!notZero(parseFloat(personasF))) {
+    check = false;
+
+    personas.parentElement.classList.add("invalid");
+    invalid2.innerText = "No puede ser cero o menor que cero";
+
+    removeText(invalid2);
+    removeBorder(personas, "invalid");
+  }
+
+  return check;
+}
+
+function validateClick(checkBtn) {
+  let check = true;
+
+  if (!checkBtn) {
+    check = false;
+
+    invalid3.innerText = "Tienes que darle click al menos a un boton";
+
+    removeText(invalid3);
+  }
+
+  return check;
+}
