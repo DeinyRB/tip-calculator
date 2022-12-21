@@ -55,7 +55,9 @@ body {
   width: 100%;
   margin-bottom: 1rem;
 }
-
+.form__box__btn {
+  background-color: hsl(172deg, 67%, 45%);
+}
 .form__box__label {
   font-weight: 700;
   font-size: 0.85rem;
