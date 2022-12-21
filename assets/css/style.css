@@ -110,6 +110,7 @@ body {
   padding: 0.7rem 0;
   outline: none;
   transition: 0.25s;
+  cursor: pointer;
 }
 .form__box__container__btn:nth-child(odd) {
   margin-right: 6%;
@@ -217,6 +218,16 @@ body {
   .result__box:last-child {
     margin-top: 2.75rem;
   }
+}
+/*
+  Clases de validacion
+*/
+.valid {
+  border: 1px solid hsl(172deg, 67%, 45%);
+}
+
+.invalid {
+  border: 1px solid red;
 }
 
 /*# sourceMappingURL=style.css.map */
